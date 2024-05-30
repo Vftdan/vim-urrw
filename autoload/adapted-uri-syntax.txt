@@ -1,0 +1,11 @@
+URI = SCHEME ":" (URI | ("//" AUTHORITY)? PATH ("?" QUERY) ("#" FRAGMENT)?);
+SCHEME = [A-Za-z0-9.+-]+;
+AUTHORITY = (USERINFO "@")? HOST;
+USERINFO = USER? (":" PASSWORD)?;
+HOST = HOSTNAME? (":" PORT)?;
+HOSTNAME = HOSTNAME_DATA | "[" HOSTNAME_DATA "]";
+when hostname is IPv4/IPv6/...: HOSTNAME_DATA = DOMAIN_OR_IP ("%25" NET_IFC)?;
+QUERY = QUERY_COMPONENT ("?" QUERY)?;  // e. g. r-component and q-component of URN
+FRAGMENT = FRAGMENT_DATA (":" LINENUMBER (":" COLUMNNUMBER)?)?;
+
+// vim: ft=pseudocode
