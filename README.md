@@ -2,7 +2,7 @@
 Modular Netrw replacement
 
 ## TODO
- - [v] url utilities
+ - [x] url utilities
  - [ ] security (prevent loading of arbitrary urls from untrusted sources)
  - [ ] buffered read/write autocommand
  - [ ] read/write functions
